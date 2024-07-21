@@ -242,7 +242,7 @@ namespace ParkingManagementSystem
                 Console.WriteLine("An error occurred: " + ex.Message);
                 throw;
             }
-            return affectedRows;
+            return affectedRows; 
         }
 
         public DataTable ExecuteQuery(string query)
