@@ -37,7 +37,9 @@
             this.LabelUsername = new System.Windows.Forms.Label();
             this.txtPwd = new System.Windows.Forms.TextBox();
             this.txtUname = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -45,6 +47,7 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.btnLogin);
             this.panel1.Controls.Add(this.foreverClose1);
             this.panel1.Controls.Add(this.label1);
@@ -74,7 +77,7 @@
             this.btnLogin.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.Color.White;
             this.btnLogin.Location = new System.Drawing.Point(100, 455);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(4);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(240, 55);
             this.btnLogin.TabIndex = 9;
@@ -90,8 +93,8 @@
             this.foreverClose1.DefaultLocation = true;
             this.foreverClose1.DownColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.foreverClose1.Font = new System.Drawing.Font("Marlett", 10F);
-            this.foreverClose1.Location = new System.Drawing.Point(413, 20);
-            this.foreverClose1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.foreverClose1.Location = new System.Drawing.Point(423, 16);
+            this.foreverClose1.Margin = new System.Windows.Forms.Padding(4);
             this.foreverClose1.Name = "foreverClose1";
             this.foreverClose1.OverColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.foreverClose1.Size = new System.Drawing.Size(18, 18);
@@ -105,7 +108,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(179, 80);
+            this.label1.Location = new System.Drawing.Point(176, 116);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(90, 32);
             this.label1.TabIndex = 4;
@@ -161,6 +164,19 @@
             this.txtUname.TabIndex = 0;
             this.txtUname.TextChanged += new System.EventHandler(this.txtUname_TextChanged);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(169, 37);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(106, 66);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 46;
+            this.pictureBox1.TabStop = false;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -174,6 +190,7 @@
             this.Text = "Login Form";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -188,5 +205,6 @@
         private System.Windows.Forms.Label LabelPassword;
         private ReaLTaiizor.Controls.ForeverClose foreverClose1;
         private Guna.UI2.WinForms.Guna2Button btnLogin;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

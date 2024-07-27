@@ -148,6 +148,10 @@ namespace ParkingManagementSystem
 
                     SetCurrentId();
                 }
+                ParkingSpaces parkingSpaces = new ParkingSpaces();
+                ParkingSpacesBike parkingSpacesBike = new ParkingSpacesBike();
+                //parkingSpaces.AddCarImageToSlot(slotNo);
+                //parkingSpacesBike.AddBikeImageToSlot(slotNo, vehicleNo);
             }
             catch (Exception ex)
             {
@@ -208,8 +212,141 @@ namespace ParkingManagementSystem
                 }
             }
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 
+    //public class Database
+    //{
+    //    private string connectionString;
+
+    //    public Database()
+    //    {
+    //        // Read the connection string from App.config
+    //        connectionString = ConfigurationManager.ConnectionStrings["MySqlConnectionString"].ConnectionString;
+    //    }
+
+    //    private MySqlConnection GetConnection()
+    //    {
+    //        return new MySqlConnection(connectionString);
+    //    }
+
+    //    public int ExecuteNonQuery(MySqlCommand cmd)
+    //    {
+    //        int affectedRows = 0;
+    //        try
+    //        {
+    //            using (var connection = GetConnection())
+    //            {
+    //                connection.Open();
+    //                cmd.Connection = connection;
+    //                affectedRows = cmd.ExecuteNonQuery();
+    //            }
+    //        }
+    //        catch (Exception ex)
+    //        {
+    //            Console.WriteLine("An error occurred: " + ex.Message);
+    //            throw;
+    //        }
+    //        return affectedRows;
+    //    }
+    //    public object ExecuteScalar(MySqlCommand cmd)
+    //    {
+    //        using (MySqlConnection connection = GetConnection())
+    //        {
+    //            connection.Open();
+    //            cmd.Connection = connection;
+    //            return cmd.ExecuteScalar();
+    //        }
+    //    }
+
+    //    public DataTable ExecuteQuery(string query)
+    //    {
+    //        DataTable dt = new DataTable();
+    //        try
+    //        {
+    //            using (var connection = GetConnection())
+    //            {
+    //                connection.Open();
+    //                using (var cmd = new MySqlCommand(query, connection))
+    //                {
+    //                    using (var adapter = new MySqlDataAdapter(cmd))
+    //                    {
+    //                        adapter.Fill(dt);
+    //                    }
+    //                }
+    //            }
+    //        }
+    //        catch (Exception ex)
+    //        {
+    //            Console.WriteLine("An error occurred: " + ex.Message);
+    //            throw;
+    //        }
+    //        return dt;
+    //    }
+    //    public int GetLastBookingId()
+    //    {
+    //        int lastBookingId = 0;
+    //        try
+    //        {
+    //            using (var connection = GetConnection())
+    //            {
+    //                connection.Open();
+    //                using (var cmd = new MySqlCommand("SELECT MAX(Booking_id) FROM VehicleBooking", connection))
+    //                {
+    //                    var result = cmd.ExecuteScalar();
+    //                    if (result != DBNull.Value)
+    //                    {
+    //                        lastBookingId = Convert.ToInt32(result);
+    //                    }
+    //                }
+    //            }
+    //        }
+    //        catch (Exception ex)
+    //        {
+    //            Console.WriteLine("An error occurred: " + ex.Message);
+    //        }
+    //        return lastBookingId;
+    //    }
+    //    public DataRow GetVehicleDetails(string vehicleNo)
+    //    {
+    //        DataRow vehicleDetails = null;
+    //        try
+    //        {
+    //            using (var connection = GetConnection())
+    //            {
+    //                connection.Open();
+    //                using (var cmd = new MySqlCommand("SELECT Vehicle_type, Emp_name, Phone_no FROM Vehicle WHERE Vehicle_no = @VehicleNo", connection))
+    //                {
+    //                    cmd.Parameters.AddWithValue("@VehicleNo", vehicleNo);
+    //                    using (var adapter = new MySqlDataAdapter(cmd))
+    //                    {
+    //                        DataTable dt = new DataTable();
+    //                        adapter.Fill(dt);
+    //                        if (dt.Rows.Count > 0)
+    //                        {
+    //                            vehicleDetails = dt.Rows[0];
+    //                        }
+    //                    }
+    //                }
+    //            }
+    //        }
+    //        catch (Exception ex)
+    //        {
+    //            Console.WriteLine("An error occurred: " + ex.Message);
+    //            throw;
+    //        }
+    //        return vehicleDetails;
+    //    }
+
+    //    internal object ExecuteScalar(MySql.Data.MySqlClient.MySqlCommand cmd)
+    //    {
+    //        throw new NotImplementedException();
+    //    }
+    //}
     public class Database
     {
         private string connectionString;
@@ -242,7 +379,17 @@ namespace ParkingManagementSystem
                 Console.WriteLine("An error occurred: " + ex.Message);
                 throw;
             }
-            return affectedRows; 
+            return affectedRows;
+        }
+
+        public object ExecuteScalar(MySqlCommand cmd)
+        {
+            using (MySqlConnection connection = GetConnection())
+            {
+                connection.Open();
+                cmd.Connection = connection;
+                return cmd.ExecuteScalar();
+            }
         }
 
         public DataTable ExecuteQuery(string query)
@@ -269,6 +416,7 @@ namespace ParkingManagementSystem
             }
             return dt;
         }
+
         public int GetLastBookingId()
         {
             int lastBookingId = 0;
@@ -293,6 +441,7 @@ namespace ParkingManagementSystem
             }
             return lastBookingId;
         }
+
         public DataRow GetVehicleDetails(string vehicleNo)
         {
             DataRow vehicleDetails = null;
@@ -323,5 +472,26 @@ namespace ParkingManagementSystem
             }
             return vehicleDetails;
         }
+
+        public DataTable GetParkingSlots()
+        {
+            string query = "SELECT Slot_no FROM parking_slots";
+            return ExecuteQuery(query);
+        }
+
+        public bool IsSlotBooked(string slotNo)
+        {
+            string query = "SELECT COUNT(*) FROM vehiclebooking WHERE Slot_no = @SlotNo";
+            using (MySqlCommand cmd = new MySqlCommand(query))
+            {
+                cmd.Parameters.AddWithValue("@SlotNo", slotNo);
+                return Convert.ToInt32(ExecuteScalar(cmd)) > 0;
+            }
+        }
+
+        //internal object ExecuteScalar(MySql.Data.MySqlClient.MySqlCommand cmd)
+        //{
+        //    throw new NotImplementedException();
+        //}
     }
 }

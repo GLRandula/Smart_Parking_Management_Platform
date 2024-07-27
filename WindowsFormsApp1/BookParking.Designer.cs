@@ -53,11 +53,14 @@ namespace ParkingManagementSystem
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.guna2Button1);
             this.panel1.Controls.Add(this.foreverClose1);
             this.panel1.Controls.Add(this.Booking_id);
@@ -85,13 +88,14 @@ namespace ParkingManagementSystem
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(820, 752);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // guna2Button1
             // 
             this.guna2Button1.BackColor = System.Drawing.Color.Transparent;
             this.guna2Button1.BackgroundImage = global::ParkingManagementSystem.Properties.Resources.Rectangle_110;
             this.guna2Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.guna2Button1.BorderRadius = 10;
+            this.guna2Button1.BorderRadius = 2;
             this.guna2Button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -100,10 +104,10 @@ namespace ParkingManagementSystem
             this.guna2Button1.FillColor = System.Drawing.Color.Transparent;
             this.guna2Button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(243, 670);
+            this.guna2Button1.Location = new System.Drawing.Point(265, 645);
             this.guna2Button1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(316, 55);
+            this.guna2Button1.Size = new System.Drawing.Size(263, 55);
             this.guna2Button1.TabIndex = 44;
             this.guna2Button1.Text = "Confirm Booking";
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
@@ -117,7 +121,7 @@ namespace ParkingManagementSystem
             this.foreverClose1.DefaultLocation = true;
             this.foreverClose1.DownColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.foreverClose1.Font = new System.Drawing.Font("Marlett", 10F);
-            this.foreverClose1.Location = new System.Drawing.Point(790, 16);
+            this.foreverClose1.Location = new System.Drawing.Point(954, 16);
             this.foreverClose1.Margin = new System.Windows.Forms.Padding(4);
             this.foreverClose1.Name = "foreverClose1";
             this.foreverClose1.OverColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -128,25 +132,27 @@ namespace ParkingManagementSystem
             // 
             // Booking_id
             // 
-            this.Booking_id.BackColor = System.Drawing.Color.White;
-            this.Booking_id.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Booking_id.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.Booking_id.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Booking_id.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Booking_id.Location = new System.Drawing.Point(667, 81);
+            this.Booking_id.ForeColor = System.Drawing.Color.White;
+            this.Booking_id.Location = new System.Drawing.Point(622, 70);
             this.Booking_id.Margin = new System.Windows.Forms.Padding(4);
             this.Booking_id.Name = "Booking_id";
-            this.Booking_id.Size = new System.Drawing.Size(89, 30);
+            this.Booking_id.Size = new System.Drawing.Size(89, 23);
             this.Booking_id.TabIndex = 42;
             this.Booking_id.TextChanged += new System.EventHandler(this.Booking_id_TextChanged_2);
             // 
             // txtDate
             // 
-            this.txtDate.BackColor = System.Drawing.Color.White;
-            this.txtDate.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.txtDate.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDate.Location = new System.Drawing.Point(52, 81);
+            this.txtDate.ForeColor = System.Drawing.Color.White;
+            this.txtDate.Location = new System.Drawing.Point(102, 70);
             this.txtDate.Margin = new System.Windows.Forms.Padding(4);
             this.txtDate.Name = "txtDate";
-            this.txtDate.Size = new System.Drawing.Size(161, 30);
+            this.txtDate.Size = new System.Drawing.Size(161, 23);
             this.txtDate.TabIndex = 41;
             this.txtDate.TextChanged += new System.EventHandler(this.txtDate_TextChanged);
             // 
@@ -156,7 +162,7 @@ namespace ParkingManagementSystem
             this.txtDesignation.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtDesignation.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDesignation.ForeColor = System.Drawing.Color.White;
-            this.txtDesignation.Location = new System.Drawing.Point(103, 612);
+            this.txtDesignation.Location = new System.Drawing.Point(104, 566);
             this.txtDesignation.Margin = new System.Windows.Forms.Padding(4);
             this.txtDesignation.Name = "txtDesignation";
             this.txtDesignation.Size = new System.Drawing.Size(607, 34);
@@ -167,7 +173,7 @@ namespace ParkingManagementSystem
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label10.Location = new System.Drawing.Point(97, 583);
+            this.label10.Location = new System.Drawing.Point(98, 537);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(115, 25);
             this.label10.TabIndex = 39;
@@ -179,7 +185,7 @@ namespace ParkingManagementSystem
             this.txtPhoneNumber.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPhoneNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPhoneNumber.ForeColor = System.Drawing.Color.White;
-            this.txtPhoneNumber.Location = new System.Drawing.Point(103, 494);
+            this.txtPhoneNumber.Location = new System.Drawing.Point(104, 482);
             this.txtPhoneNumber.Margin = new System.Windows.Forms.Padding(4);
             this.txtPhoneNumber.Name = "txtPhoneNumber";
             this.txtPhoneNumber.Size = new System.Drawing.Size(607, 30);
@@ -190,7 +196,7 @@ namespace ParkingManagementSystem
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label9.Location = new System.Drawing.Point(97, 465);
+            this.label9.Location = new System.Drawing.Point(98, 453);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(142, 25);
             this.label9.TabIndex = 37;
@@ -202,7 +208,7 @@ namespace ParkingManagementSystem
             this.txtOwnerId.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtOwnerId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtOwnerId.ForeColor = System.Drawing.Color.White;
-            this.txtOwnerId.Location = new System.Drawing.Point(103, 384);
+            this.txtOwnerId.Location = new System.Drawing.Point(104, 393);
             this.txtOwnerId.Margin = new System.Windows.Forms.Padding(4);
             this.txtOwnerId.Name = "txtOwnerId";
             this.txtOwnerId.Size = new System.Drawing.Size(607, 30);
@@ -214,7 +220,7 @@ namespace ParkingManagementSystem
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label8.Location = new System.Drawing.Point(97, 356);
+            this.label8.Location = new System.Drawing.Point(98, 365);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(125, 25);
             this.label8.TabIndex = 35;
@@ -226,7 +232,7 @@ namespace ParkingManagementSystem
             this.txtVehicleType.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtVehicleType.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtVehicleType.ForeColor = System.Drawing.Color.White;
-            this.txtVehicleType.Location = new System.Drawing.Point(439, 286);
+            this.txtVehicleType.Location = new System.Drawing.Point(440, 311);
             this.txtVehicleType.Margin = new System.Windows.Forms.Padding(4);
             this.txtVehicleType.Name = "txtVehicleType";
             this.txtVehicleType.Size = new System.Drawing.Size(271, 30);
@@ -238,7 +244,7 @@ namespace ParkingManagementSystem
             this.txtVehicleNumber.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtVehicleNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtVehicleNumber.ForeColor = System.Drawing.Color.White;
-            this.txtVehicleNumber.Location = new System.Drawing.Point(103, 286);
+            this.txtVehicleNumber.Location = new System.Drawing.Point(103, 222);
             this.txtVehicleNumber.Margin = new System.Windows.Forms.Padding(4);
             this.txtVehicleNumber.Name = "txtVehicleNumber";
             this.txtVehicleNumber.Size = new System.Drawing.Size(271, 30);
@@ -250,7 +256,7 @@ namespace ParkingManagementSystem
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label6.Location = new System.Drawing.Point(433, 257);
+            this.label6.Location = new System.Drawing.Point(434, 282);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(118, 25);
             this.label6.TabIndex = 32;
@@ -261,7 +267,7 @@ namespace ParkingManagementSystem
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label7.Location = new System.Drawing.Point(97, 257);
+            this.label7.Location = new System.Drawing.Point(97, 193);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(149, 25);
             this.label7.TabIndex = 31;
@@ -273,7 +279,7 @@ namespace ParkingManagementSystem
             this.txtInTime.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtInTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtInTime.ForeColor = System.Drawing.Color.White;
-            this.txtInTime.Location = new System.Drawing.Point(439, 187);
+            this.txtInTime.Location = new System.Drawing.Point(440, 222);
             this.txtInTime.Margin = new System.Windows.Forms.Padding(4);
             this.txtInTime.Name = "txtInTime";
             this.txtInTime.Size = new System.Drawing.Size(271, 30);
@@ -285,7 +291,7 @@ namespace ParkingManagementSystem
             this.txtParkingLotNumber.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtParkingLotNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtParkingLotNumber.ForeColor = System.Drawing.Color.White;
-            this.txtParkingLotNumber.Location = new System.Drawing.Point(103, 187);
+            this.txtParkingLotNumber.Location = new System.Drawing.Point(104, 310);
             this.txtParkingLotNumber.Margin = new System.Windows.Forms.Padding(4);
             this.txtParkingLotNumber.Name = "txtParkingLotNumber";
             this.txtParkingLotNumber.Size = new System.Drawing.Size(271, 30);
@@ -297,7 +303,7 @@ namespace ParkingManagementSystem
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Location = new System.Drawing.Point(433, 159);
+            this.label5.Location = new System.Drawing.Point(434, 194);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(76, 25);
             this.label5.TabIndex = 28;
@@ -308,7 +314,7 @@ namespace ParkingManagementSystem
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(97, 159);
+            this.label4.Location = new System.Drawing.Point(98, 282);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(180, 25);
             this.label4.TabIndex = 27;
@@ -319,7 +325,7 @@ namespace ParkingManagementSystem
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(52, 57);
+            this.label3.Location = new System.Drawing.Point(100, 42);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(51, 21);
             this.label3.TabIndex = 26;
@@ -330,7 +336,7 @@ namespace ParkingManagementSystem
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(663, 57);
+            this.label2.Location = new System.Drawing.Point(618, 42);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(93, 21);
             this.label2.TabIndex = 25;
@@ -341,11 +347,23 @@ namespace ParkingManagementSystem
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(245, 57);
+            this.label1.Location = new System.Drawing.Point(255, 114);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(274, 54);
             this.label1.TabIndex = 24;
             this.label1.Text = "Book Parking";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(327, 28);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(133, 82);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 45;
+            this.pictureBox1.TabStop = false;
             // 
             // BookParking
             // 
@@ -365,6 +383,7 @@ namespace ParkingManagementSystem
             this.Load += new System.EventHandler(this.BookParking_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -393,5 +412,6 @@ namespace ParkingManagementSystem
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

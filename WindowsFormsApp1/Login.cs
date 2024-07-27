@@ -21,7 +21,6 @@ namespace ParkingManagementSystem
             public static bool IsLoggedIn { get; set; } = false;
         }
 
-
         private void Login_Load(object sender, EventArgs e)
         {
 

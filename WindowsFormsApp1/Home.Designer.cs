@@ -85,7 +85,7 @@ namespace ParkingManagementSystem
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(104, 39);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(133, 82);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -104,7 +104,7 @@ namespace ParkingManagementSystem
             this.btnLogOut.ForeColor = System.Drawing.Color.Red;
             this.btnLogOut.Image = global::ParkingManagementSystem.Properties.Resources.ic__outline_logout;
             this.btnLogOut.Location = new System.Drawing.Point(19, 769);
-            this.btnLogOut.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLogOut.Margin = new System.Windows.Forms.Padding(4);
             this.btnLogOut.Name = "btnLogOut";
             this.btnLogOut.ShadowDecoration.BorderRadius = 10;
             this.btnLogOut.Size = new System.Drawing.Size(317, 55);
@@ -125,7 +125,7 @@ namespace ParkingManagementSystem
             this.btnParkingInfo.Image = global::ParkingManagementSystem.Properties.Resources.line_md__document_report;
             this.btnParkingInfo.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnParkingInfo.Location = new System.Drawing.Point(19, 453);
-            this.btnParkingInfo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnParkingInfo.Margin = new System.Windows.Forms.Padding(4);
             this.btnParkingInfo.Name = "btnParkingInfo";
             this.btnParkingInfo.ShadowDecoration.BorderRadius = 10;
             this.btnParkingInfo.Size = new System.Drawing.Size(317, 55);
@@ -147,7 +147,7 @@ namespace ParkingManagementSystem
             this.btnParkingSpaces.Image = global::ParkingManagementSystem.Properties.Resources.maki__parking_garage;
             this.btnParkingSpaces.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnParkingSpaces.Location = new System.Drawing.Point(19, 370);
-            this.btnParkingSpaces.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnParkingSpaces.Margin = new System.Windows.Forms.Padding(4);
             this.btnParkingSpaces.Name = "btnParkingSpaces";
             this.btnParkingSpaces.ShadowDecoration.BorderRadius = 10;
             this.btnParkingSpaces.Size = new System.Drawing.Size(317, 55);
@@ -171,7 +171,7 @@ namespace ParkingManagementSystem
             this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
             this.btnHome.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnHome.Location = new System.Drawing.Point(19, 288);
-            this.btnHome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnHome.Margin = new System.Windows.Forms.Padding(4);
             this.btnHome.Name = "btnHome";
             this.btnHome.ShadowDecoration.BorderRadius = 10;
             this.btnHome.Size = new System.Drawing.Size(317, 55);
@@ -207,7 +207,7 @@ namespace ParkingManagementSystem
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(99, 181);
+            this.label2.Location = new System.Drawing.Point(66, 182);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(202, 25);
             this.label2.TabIndex = 2;
@@ -369,7 +369,7 @@ namespace ParkingManagementSystem
             this.nightControlBox1.EnableMaximizeColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(160)))));
             this.nightControlBox1.EnableMinimizeButton = true;
             this.nightControlBox1.EnableMinimizeColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(160)))));
-            this.nightControlBox1.Location = new System.Drawing.Point(1209, 0);
+            this.nightControlBox1.Location = new System.Drawing.Point(1255, 0);
             this.nightControlBox1.MaximizeHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.nightControlBox1.MaximizeHoverForeColor = System.Drawing.Color.White;
             this.nightControlBox1.MinimizeHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
