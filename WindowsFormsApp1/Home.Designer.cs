@@ -103,7 +103,7 @@ namespace ParkingManagementSystem
             this.btnLogOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogOut.ForeColor = System.Drawing.Color.Red;
             this.btnLogOut.Image = global::ParkingManagementSystem.Properties.Resources.ic__outline_logout;
-            this.btnLogOut.Location = new System.Drawing.Point(19, 769);
+            this.btnLogOut.Location = new System.Drawing.Point(19, 799);
             this.btnLogOut.Margin = new System.Windows.Forms.Padding(4);
             this.btnLogOut.Name = "btnLogOut";
             this.btnLogOut.ShadowDecoration.BorderRadius = 10;
@@ -183,7 +183,7 @@ namespace ParkingManagementSystem
             // pictureBox5
             // 
             this.pictureBox5.Image = global::ParkingManagementSystem.Properties.Resources.ic__round_account_circle;
-            this.pictureBox5.Location = new System.Drawing.Point(71, 692);
+            this.pictureBox5.Location = new System.Drawing.Point(105, 741);
             this.pictureBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(55, 52);
@@ -196,11 +196,11 @@ namespace ParkingManagementSystem
             this.lblUserName.AutoSize = true;
             this.lblUserName.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUserName.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblUserName.Location = new System.Drawing.Point(135, 706);
+            this.lblUserName.Location = new System.Drawing.Point(166, 756);
             this.lblUserName.Name = "lblUserName";
-            this.lblUserName.Size = new System.Drawing.Size(112, 24);
+            this.lblUserName.Size = new System.Drawing.Size(70, 24);
             this.lblUserName.TabIndex = 12;
-            this.lblUserName.Text = "Avano Finch";
+            this.lblUserName.Text = "ADMIN";
             // 
             // label2
             // 

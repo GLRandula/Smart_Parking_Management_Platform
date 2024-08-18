@@ -121,7 +121,7 @@
   <data name="pictureBox1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAosAAAHbCAYAAACjjNB9AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vwAADr8BOAVTJAAAYRFJREFUeF7t3Qm81XP+P/CxzWAYjJkhW8bOWLKMpTCWGD9MlmGsQ0mylSUqUYlE
+        vgAADr4B6kKxwAAAYRFJREFUeF7t3Qm81XP+P/CxzWAYjJkhW8bOWLKMpTCWGD9MlmGsQ0mylSUqUYlE
         QjGqIRIJWSIlkRaJSkkKJSkpqbudc7dzt3NP/9fblP91ve7tnvNdzvf7Pa/34/F8fK6P23l/znf93O/y
         +fxq3bp1IiIiIiIUrRQRERERMbRSRERERMTQShERERERQytFRERERAytFBERERExtFJERERExNBKERER
         ERFDK0VEREREDK0UERERETG0UkRERETE0EoREREREUMrRUREREQMrRQRERERMbRSRERERMTQShERERER
@@ -562,7 +562,7 @@
   <data name="btnCar.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAPAAAAAyCAYAAABidVYtAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DQAACw0B7QfALAAAPdlJREFUeF6NfQm3ZlV17b3fdxOTaBLU9K2mgaIrqm+AKgoQbFDBHlsQaewlJqYz
+        DAAACwwBP0AiyAAAPdlJREFUeF6NfQm3ZlV17b3fdxOTaBLU9K2mgaIrqm+AKgoQbFDBHlsQaewlJqYz
         eZj2PTVGX6JQVFENRfV9FY1RiRjyUBNA3y8IP8F/sM+bc65mr3PuxTzGWGPvs7vzFWPPO9dae619Flb6
         71X3nrng4k88du9Fn3j8DOS/Vn38sWHVRx9rF3/k0eHiD0PuPj9ccue54ZIPnR8uvePccOkHIbeda5d9
         4Oxw2fvPDpe/98xw2btPD5ffCnnXqWH1OyBvPzmsfuupdsVbTg5X3Hyyrbn5xLDmTceHNW88Pqy9CfL6
