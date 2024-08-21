@@ -32,9 +32,6 @@ The Parking Management System is a C# Windows Forms application designed to stre
    ```bash
    git clone https://github.com/yourusername/parking-management-system.git
 
-### Screenshots
-Include screenshots of the main UI sections, such as the vehicle entry form, booking interface, and data grid view.
-
 ### Contributing
 If you wish to contribute to this project, please fork the repository and submit a pull request. For major changes, please open an issue first to discuss what you would like to change.
 
